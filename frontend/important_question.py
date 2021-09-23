@@ -4,13 +4,19 @@ from PIL import Image
 
 image = Image.open("deep_thought.jpg")
 
-st.image(image,"What is the answer to life, the universe, and everything?")
+st.image(image,)
 
-buff, user_input, buff2 = st.columns([1,3,1])
+st.markdown("""
+    <h1 style='text-align: center;'>What is the answer to life, the universe, and everything?</h1>
+    """, unsafe_allow_html = True)
+
+buff, user_input, buff2 = st.columns([1,1,1])
 
 user_input = user_input.text_input("","")
 
-if user_input == "42":
+correct_answers = ["42","forty two","forty-two"] 
+
+if user_input.lower().strip() in correct_answers:
     st.markdown("""
     <h1 style='text-align: center; color: green;'>Correct!</h1>
     """, unsafe_allow_html = True)
