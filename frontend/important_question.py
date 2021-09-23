@@ -6,7 +6,9 @@ image = Image.open("deep_thought.jpg")
 
 st.image(image,"What is the answer to life, the universe, and everything?")
 
-user_input = st.text_input("", "")
+buff, user_input, buff2 = st.columns([1,3,1])
+
+user_input = user_input.text_input("","")
 
 if user_input == "42":
     st.markdown("""
