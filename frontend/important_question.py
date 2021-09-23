@@ -9,6 +9,10 @@ st.image(image,"What is the answer to life, the universe, and everything?")
 user_input = st.text_input("", "")
 
 if user_input == "42":
-    st.markdown("""# Correct!""")
+    st.markdown("""
+    <h1 style='text-align: center; color: green;'>Correct!</h1>
+    """, unsafe_allow_html = True)
 else:
-    st.markdown("""# Incorrect!""")
+    st.markdown("""
+    <h1 style='text-align: center; color: red;'>Incorrect!</h1>
+    """, unsafe_allow_html = True)
