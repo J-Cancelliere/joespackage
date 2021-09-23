@@ -4,11 +4,11 @@ from PIL import Image
 
 image = Image.open("deep_thought.jpg")
 
-st.image(image)
+st.image(image,"What is the answer to life, the universe, and everything?")
 
-user_input = st.text_input("What is the answer to life, the universe, and everything?", "")
+user_input = st.text_input("", "")
 
 if user_input == "42":
-    st.write("Correct!")
+    st.markdown("""# Correct!""")
 else:
-    st.write("Incorrect!")
+    st.markdown("""# Incorrect!""")
